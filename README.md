@@ -174,9 +174,8 @@ class SimpleService extends Service {
 
 ## API ##
 
----
-
 ### app.httpSimple.rest(url,opts) ###
+
 构建rest http接口模型．
 
   * `url`: http接口请求地址
