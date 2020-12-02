@@ -20,9 +20,7 @@
 [download-image]: https://img.shields.io/npm/dm/egg-http-simple.svg?style=flat-square
 [download-url]: https://npmjs.org/package/egg-http-simple
 
-<!--
-Description here.
--->
+提供简单快速使用http接口的方法.
 
 ## Install
 
@@ -173,6 +171,19 @@ class SimpleService extends Service {
 
 }
 ```
+
+## API ##
+
+---
+
+### app.httpSimple.rest(url,opts) ###
+构建rest http接口模型．
+
+  * `url`: http接口请求地址
+  * `opts`: rest请求可选项．包含请求头注入配置,请求内容转换以及http请求参数等可选项．
+    * `opts.inject`: 从opts注入到http请求header中的key-value对．请参考[config/config.default.js](config/config.default.js)
+    * `opts.trasform`: 在发起请求前，将entity转换为请求需要的数据内容格式．一般用于处理为buffer或者xml内容.
+    * 其他：　请参考`app.curl`的opts参数
 
 ## Questions & Suggestions
 
